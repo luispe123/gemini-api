@@ -1,0 +1,37 @@
+{
+  "name": "backend-libertad-360",
+  "version": "1.0.0",
+  "description": "Backend para conectar con Gemini API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
+```
+
+*(Al tener este archivo `package.json`, Render sabrá automáticamente que debe ejecutar `npm install express cors`, sin que tú tengas que tocar ninguna terminal).*
+
+#### Paso 2: Despliega en Render (Gratis)
+1. Ve a [Render.com](https://render.com/) y crea una cuenta gratuita.
+2. Haz clic en **"New"** (Nuevo) y selecciona **"Web Service"** (Servicio Web).
+3. Conecta tu cuenta de GitHub y selecciona el repositorio donde subiste los dos archivos.
+4. Render detectará automáticamente que es un proyecto Node.js.
+5. Asegúrate de que el "Start Command" sea `npm start` o `node server.js`.
+6. Selecciona el plan "Free" (Gratis).
+7. Haz clic en **"Create Web Service"**.
+
+Render hará todo el trabajo pesado. Instalará Express, CORS y pondrá tu servidor a correr. Al final, te dará una URL (ejemplo: `https://backend-libertad-360.onrender.com`).
+
+#### Paso 3: Actualiza tu Frontend (Simulador)
+Ahora solo debes ir a tu archivo `simulador_360.html` (el que tienes en tu cPanel normal, donde tienes tu página de ventas) y cambiar la URL:
+
+```javascript
+// Cambia esto:
+// const BACKEND_URL = '/api/consultar-ia'; 
+
+// Por la URL que te dio Render:
+const BACKEND_URL = 'https://tu-nuevo-link-de-render.onrender.com/api/consultar-ia';
