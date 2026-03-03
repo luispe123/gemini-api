@@ -13,9 +13,17 @@ app.use(express.json());
 // Lo ideal es usar variables de entorno (process.env.GEMINI_KEY), 
 // pero aquí las dejo en arreglo como las tenías para mantener tu lógica de rotación.
 const apiKeys = [
-    "TU_LLAVE_API_1_AQUI",  
-    "TU_LLAVE_API_2_AQUI",
-    // Agrega las demás...
+    "AIzaSyBnOUe3-OQm591hIqifDOXP3oyiNsQXU9A",  
+    "AIzaSyCK5zZuhR1EmU4kJR4FLDMtjwCQxmjuc-E", 
+    "AIzaSyAqp4-DxlrSyeek8jtAiYhGEomTaT4ctQg",
+    "AIzaSyByThVfEFbw-ylfznjzzb9tyx-CGCWEwyI",
+    "AIzaSyC_kBXBboh4oIcdFyPJu23aPhsvpVAwiOY",
+    "AIzaSyDybU1exbPj8aSDhpP482UnlWkLgOBe7lY",
+    "AIzaSyCgnj2kBSjgNCd_baqPX4aDTLDtDEEN3cU",
+    "AIzaSyAr2RDiPVkFIiPkgixacoLRaRIpOQlwvbY",
+    "AIzaSyDt6yiKpXiKsOn4qcEazZzaE2GlyM8vvAI",
+    "AIzaSyAF0Ygrqp_ras-J2vj00FBilKB1KRM1900",
+    "AIzaSyBgJ1ZyscG_THMRAOiK7R2_vG-0vRC4odQ"
 ];
 
 // Endpoint que recibirá las peticiones de tu frontend
@@ -70,4 +78,5 @@ app.post('/api/consultar-ia', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor backend corriendo en el puerto ${PORT}`);
+
 });
