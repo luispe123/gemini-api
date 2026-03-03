@@ -46,7 +46,7 @@ app.post('/api/consultar-ia', async (req, res) => {
         const currentKey = apiKeys[k];
         
         // Usamos el modelo 1.5-flash por estabilidad
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${currentKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${currentKey}`;
 
         try {
             console.log(`[Petición] Procesando con Llave #${k + 1}...`);
@@ -97,3 +97,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`🚀 Servidor backend corriendo exitosamente en el puerto ${PORT}`);
 });
+
